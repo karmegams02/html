@@ -15,8 +15,8 @@ jobs:
     - uses: azure/docker-login@v1
       with:
         login-server: githubhtmltopdf.azurecr.io
-        username: ${githubhtmltopdf}
-        password: ${/laQaYkOWwKVEjiOYEfFRgMqlaInXZ196ZItwvyiDI+ACRCI2F7n}
+        username: githubhtmltopdf
+        password: /laQaYkOWwKVEjiOYEfFRgMqlaInXZ196ZItwvyiDI+ACRCI2F7n
     - run: |
         docker build . -t githubhtmltopdf.azurecr.io/githubhtmltopdf:${{ github.sha }}
         docker push githubhtmltopdf.azurecr.io/githubhtmltopdf:${{ github.sha }}
