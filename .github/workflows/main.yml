@@ -1,0 +1,22 @@
+name: Build Linux Container Image and Push to ACR
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: HtmlToPDF_Conversion
+    steps:
+    - uses: actions/checkout@v2
+    - uses: azure/docker-login@v1
+      with:
+        login-server: githubhtmltopdf.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - run: |
+        docker build . -t githubhtmltopdf.azurecr.io/githubhtmltopdf:${{ github.sha }}
+        docker push githubhtmltopdf.azurecr.io/githubhtmltopdf:${{ github.sha }}
