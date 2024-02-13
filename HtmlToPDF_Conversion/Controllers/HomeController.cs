@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 using System.Diagnostics;
 
 namespace HtmlToPDF_Conversion.Controllers
