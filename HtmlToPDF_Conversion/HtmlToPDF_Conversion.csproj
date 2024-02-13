@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
-    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="24.1.41" />
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="24.2.5" />
   </ItemGroup>
 
 </Project>
